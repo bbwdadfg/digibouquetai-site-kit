@@ -1,0 +1,762 @@
+{
+  "schema_version": "1.0",
+  "target": {
+    "site": "https://digibouquetai.com",
+    "brand": "DigiBouquet AI",
+    "site_type": "AI digital gift web application",
+    "slug_hyphen": "digibouquetai-site-kit",
+    "slug_underscore": "digibouquetai_site_kit",
+    "source_repo": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+    "useful_urls": [
+      "https://digibouquetai.com",
+      "https://digibouquetai.com/create-bouquet",
+      "https://digibouquetai.com/ai-card",
+      "https://digibouquetai.com/bouquet-examples",
+      "https://digibouquetai.com/guides",
+      "https://digibouquetai.com/pricing"
+    ],
+    "run_started_at": "2026-07-25T17:50:00Z",
+    "run_finished_at": "2026-07-25T18:07:56Z"
+  },
+  "platforms": [
+    {
+      "platform": "github",
+      "status": "verified",
+      "artifact_type": "source_repository",
+      "automation_level": "automated",
+      "package": "bbwdadfg/digibouquetai-site-kit",
+      "version": "v0.1.1",
+      "public_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "repository_homepage",
+        "topics",
+        "release",
+        "license"
+      ],
+      "credential_status": "gh_authenticated_session_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "github_api_and_public_http",
+        "result": "public repository and v0.1.1 release returned HTTP 200; homepage and topics match target",
+        "checked_at": "2026-07-25T18:07:56Z"
+      },
+      "cleanup": [],
+      "notes": [
+        "Source commits c929615 and 2af1e47; tags v0.1.0 and v0.1.1."
+      ]
+    },
+    {
+      "platform": "pkg_go_dev",
+      "status": "published",
+      "artifact_type": "go_module",
+      "automation_level": "automated_after_git_tag",
+      "package": "github.com/bbwdadfg/digibouquetai-site-kit",
+      "version": "v0.1.1",
+      "public_url": "https://pkg.go.dev/github.com/bbwdadfg/digibouquetai-site-kit@v0.1.1",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [
+        "source_repository",
+        "go_module"
+      ],
+      "credential_status": "not_required",
+      "blocked_reason": "",
+      "verification": {
+        "method": "go_proxy_http",
+        "result": "Go proxy .info and .mod returned HTTP 200; pkg.go.dev returned 404 during initial indexing check",
+        "checked_at": "2026-07-25T18:07:56Z"
+      },
+      "cleanup": [],
+      "notes": [
+        "Local go test coverage: 91.7%.",
+        "Keep published until pkg.go.dev documentation page returns HTTP 200."
+      ]
+    },
+    {
+      "platform": "packagist",
+      "status": "planned",
+      "artifact_type": "composer_package",
+      "automation_level": "semi_auto",
+      "package": "bbwdadfg/digibouquetai-site-kit",
+      "version": "",
+      "public_url": "https://packagist.org/packages/bbwdadfg/digibouquetai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_item_present_not_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "Composer artifact not generated in this run."
+      ]
+    },
+    {
+      "platform": "crates_io_docs_rs",
+      "status": "blocked_credentials",
+      "artifact_type": "rust_crate",
+      "automation_level": "automated_with_token",
+      "package": "digibouquetai-site-kit",
+      "version": "",
+      "public_url": "https://crates.io/crates/digibouquetai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_item_missing",
+      "blocked_reason": "macOS Keychain service publish-package-backlinks/crates-token is missing",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "Registry API confirmed the candidate name was available."
+      ]
+    },
+    {
+      "platform": "rubygems",
+      "status": "blocked_credentials",
+      "artifact_type": "ruby_gem",
+      "automation_level": "automated_with_token",
+      "package": "digibouquetai-site-kit",
+      "version": "",
+      "public_url": "https://rubygems.org/gems/digibouquetai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_item_missing",
+      "blocked_reason": "macOS Keychain service publish-package-backlinks/rubygems-api-key is missing",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "Registry API confirmed the candidate name was available."
+      ]
+    },
+    {
+      "platform": "npm",
+      "status": "verified",
+      "artifact_type": "javascript_package",
+      "automation_level": "automated_with_token",
+      "package": "digibouquetai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://www.npmjs.com/package/digibouquetai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [
+        "package_homepage",
+        "repository",
+        "README.md",
+        "registry_metadata"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "npm_registry_json",
+        "result": "latest is 0.1.0; homepage and repository match; tarball shasum ecb9efdce023cc7be23fb3849dce870e4e52cf7e",
+        "checked_at": "2026-07-25T18:07:56Z"
+      },
+      "cleanup": [
+        "temporary npmrc deleted",
+        "temporary token variable unset"
+      ],
+      "notes": [
+        "npm test passed 4/4 with 100% line, branch, and function coverage.",
+        "npm pack dry-run contained only LICENSE, README.md, index.d.ts, index.js, and package.json.",
+        "npmjs.com HTML returned 403 from automated HTTP, so authoritative registry JSON was used."
+      ]
+    },
+    {
+      "platform": "pypi",
+      "status": "planned",
+      "artifact_type": "python_package",
+      "automation_level": "automated_with_token",
+      "package": "digibouquetai-site-kit",
+      "version": "",
+      "public_url": "https://pypi.org/project/digibouquetai-site-kit/",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_item_present_not_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "Registry JSON confirmed the candidate name was available.",
+        "Python artifact not generated in this run."
+      ]
+    },
+    {
+      "platform": "pub_dev",
+      "status": "planned",
+      "artifact_type": "dart_package",
+      "automation_level": "semi_auto_oauth",
+      "package": "digibouquetai_site_kit",
+      "version": "",
+      "public_url": "https://pub.dev/packages/digibouquetai_site_kit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "oauth_not_checked",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "Registry API confirmed the candidate name was available.",
+        "Dart artifact not generated in this run."
+      ]
+    },
+    {
+      "platform": "hex_hexdocs",
+      "status": "planned",
+      "artifact_type": "elixir_package",
+      "automation_level": "automated_with_token",
+      "package": "digibouquetai_site_kit",
+      "version": "",
+      "public_url": "https://hex.pm/packages/digibouquetai_site_kit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_item_present_not_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "Registry API confirmed the candidate name was available.",
+        "Elixir artifact not generated in this run."
+      ]
+    },
+    {
+      "platform": "clojars",
+      "status": "planned",
+      "artifact_type": "maven_artifact",
+      "automation_level": "automated_with_token",
+      "package": "net.clojars.tianwei/digibouquetai-site-kit",
+      "version": "",
+      "public_url": "https://clojars.org/net.clojars.tianwei/digibouquetai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_items_present_not_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "Java/Clojars artifact not generated in this run."
+      ]
+    },
+    {
+      "platform": "docker_hub",
+      "status": "planned",
+      "artifact_type": "oci_image",
+      "automation_level": "automated_with_token_or_api",
+      "package": "baiwei111/digibouquetai-site-kit",
+      "version": "",
+      "public_url": "https://hub.docker.com/r/baiwei111/digibouquetai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_items_present_not_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "OCI image was not generated in this run."
+      ]
+    },
+    {
+      "platform": "jsr",
+      "status": "blocked_oauth",
+      "artifact_type": "typescript_package",
+      "automation_level": "semi_auto",
+      "package": "@bbwdadfg/digibouquetai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://jsr.io/@bbwdadfg/digibouquetai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "repository"
+      ],
+      "credential_status": "keychain_item_present_not_used",
+      "blocked_reason": "JSR requires sign-in and first-time scoped package approval before live publish",
+      "verification": {
+        "method": "jsr_cli_dry_run_and_orca_snapshot",
+        "result": "JSR dry-run passed; Orca tab e074945e-eb9c-4e01-bc5e-8465dfdf14be is stopped at Sign in to JSR",
+        "checked_at": "2026-07-25T18:07:56Z"
+      },
+      "cleanup": [],
+      "notes": [
+        "Live publish was not attempted because the new package API returned 404 and approval is user-controlled.",
+        "The jsr CLI wrapper can expose token arguments on failure, so no token was passed before namespace approval."
+      ]
+    },
+    {
+      "platform": "maven_central_javadoc",
+      "status": "planned",
+      "artifact_type": "java_library",
+      "automation_level": "semi_auto_signed",
+      "package": "io.github.bbwdadfg:digibouquetai-site-kit",
+      "version": "",
+      "public_url": "https://central.sonatype.com/artifact/io.github.bbwdadfg/digibouquetai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_items_present_not_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "Central-ready Java artifact and signatures were not generated in this run."
+      ]
+    },
+    {
+      "platform": "nuget",
+      "status": "planned",
+      "artifact_type": "dotnet_package",
+      "automation_level": "automated_with_token",
+      "package": "DigibouquetaiSiteKit",
+      "version": "",
+      "public_url": "https://www.nuget.org/packages/DigibouquetaiSiteKit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_item_present_not_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "Registry API confirmed the candidate ID was available.",
+        ".NET artifact not generated in this run."
+      ]
+    },
+    {
+      "platform": "cocoapods",
+      "status": "planned",
+      "artifact_type": "ios_macos_pod",
+      "automation_level": "semi_auto_with_trunk_auth",
+      "package": "DigibouquetaiSiteKit",
+      "version": "",
+      "public_url": "https://cocoapods.org/pods/DigibouquetaiSiteKit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_item_present_not_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "Trunk API confirmed the candidate pod name was available.",
+        "Swift pod was not generated in this run."
+      ]
+    },
+    {
+      "platform": "luarocks",
+      "status": "planned",
+      "artifact_type": "lua_module",
+      "automation_level": "automated_with_token",
+      "package": "bbwdadfg/digibouquetai-site-kit",
+      "version": "",
+      "public_url": "https://luarocks.org/modules/bbwdadfg/digibouquetai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_item_present_not_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "Lua rock was not generated in this run."
+      ]
+    },
+    {
+      "platform": "cpan_metacpan",
+      "status": "planned",
+      "artifact_type": "perl_distribution",
+      "automation_level": "automated_with_pause_account",
+      "package": "DigiBouquetAI-SiteKit",
+      "version": "",
+      "public_url": "https://metacpan.org/dist/DigiBouquetAI-SiteKit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_items_present_not_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "Perl distribution was not generated in this run.",
+        "Prior run memory reports stored PAUSE credentials returned 401; revalidate before publish."
+      ]
+    },
+    {
+      "platform": "hackage",
+      "status": "blocked_credentials",
+      "artifact_type": "haskell_package",
+      "automation_level": "automated_with_token",
+      "package": "digibouquetai-site-kit",
+      "version": "",
+      "public_url": "https://hackage.haskell.org/package/digibouquetai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_item_missing",
+      "blocked_reason": "macOS Keychain service publish-package-backlinks/hackage-token is missing; first upload may also require uploader review",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "Registry HTTP check confirmed the candidate name was available."
+      ]
+    },
+    {
+      "platform": "chocolatey",
+      "status": "planned",
+      "artifact_type": "windows_package",
+      "automation_level": "semi_auto_review",
+      "package": "digibouquetai-site-kit",
+      "version": "",
+      "public_url": "https://community.chocolatey.org/packages/digibouquetai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_item_present_not_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "Windows package was not generated in this run."
+      ]
+    },
+    {
+      "platform": "github_packages",
+      "status": "planned",
+      "artifact_type": "github_package",
+      "automation_level": "automated_with_token",
+      "package": "@bbwdadfg/digibouquetai-site-kit",
+      "version": "",
+      "public_url": "https://github.com/bbwdadfg/digibouquetai-site-kit/pkgs/npm/digibouquetai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_item_present_not_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "GitHub Packages copy was not published in this run."
+      ]
+    },
+    {
+      "platform": "gitlab_packages",
+      "status": "planned",
+      "artifact_type": "gitlab_package",
+      "automation_level": "automated_with_token_or_ci",
+      "package": "digibouquetai-site-kit",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_item_present_not_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "GitLab project/package was not created in this run."
+      ]
+    },
+    {
+      "platform": "terraform_registry",
+      "status": "skipped_not_applicable",
+      "artifact_type": "terraform_module",
+      "automation_level": "semi_auto",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "not_applicable",
+      "blocked_reason": "No infrastructure or self-hosting use case.",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "No infrastructure or self-hosting use case."
+      ]
+    },
+    {
+      "platform": "helm_artifact_hub",
+      "status": "skipped_not_applicable",
+      "artifact_type": "helm_chart",
+      "automation_level": "semi_auto",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "not_applicable",
+      "blocked_reason": "No Kubernetes or self-hosted deployment use case.",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "No Kubernetes or self-hosted deployment use case."
+      ]
+    },
+    {
+      "platform": "ansible_galaxy",
+      "status": "skipped_not_applicable",
+      "artifact_type": "ansible_collection_or_role",
+      "automation_level": "automated_with_token",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "not_applicable",
+      "blocked_reason": "No system automation or deployment use case.",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "No system automation or deployment use case."
+      ]
+    },
+    {
+      "platform": "open_vsx",
+      "status": "skipped_not_applicable",
+      "artifact_type": "vscode_compatible_extension",
+      "automation_level": "semi_auto_review",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "not_applicable",
+      "blocked_reason": "No natural editor or developer-tool workflow.",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "No natural editor or developer-tool workflow."
+      ]
+    },
+    {
+      "platform": "wordpress_plugin_directory",
+      "status": "skipped_not_applicable",
+      "artifact_type": "wordpress_plugin",
+      "automation_level": "manual_review",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "not_applicable",
+      "blocked_reason": "No real WordPress integration was identified.",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "No real WordPress integration was identified."
+      ]
+    },
+    {
+      "platform": "aur",
+      "status": "skipped_not_applicable",
+      "artifact_type": "arch_package",
+      "automation_level": "manual_git_ssh",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "not_applicable",
+      "blocked_reason": "No real Arch CLI or desktop application exists.",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "No real Arch CLI or desktop application exists."
+      ]
+    },
+    {
+      "platform": "conda_forge",
+      "status": "skipped_not_applicable",
+      "artifact_type": "conda_recipe",
+      "automation_level": "pr_review",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "not_applicable",
+      "blocked_reason": "Generic site helper has no scientific or conda-specific value.",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "Generic site helper has no scientific or conda-specific value."
+      ]
+    },
+    {
+      "platform": "cran",
+      "status": "skipped_not_applicable",
+      "artifact_type": "r_package",
+      "automation_level": "manual_review",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "not_applicable",
+      "blocked_reason": "No real R utility exists.",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "No real R utility exists."
+      ]
+    },
+    {
+      "platform": "flathub",
+      "status": "skipped_not_applicable",
+      "artifact_type": "desktop_app",
+      "automation_level": "pr_review",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "not_applicable",
+      "blocked_reason": "DigiBouquet AI is a web app, not a desktop application.",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "DigiBouquet AI is a web app, not a desktop application."
+      ]
+    },
+    {
+      "platform": "homebrew",
+      "status": "skipped_not_applicable",
+      "artifact_type": "formula_or_cask",
+      "automation_level": "pr_review",
+      "package": "",
+      "version": "",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "not_applicable",
+      "blocked_reason": "No substantive CLI or desktop application exists.",
+      "verification": {
+        "method": "not_run",
+        "result": "not verified",
+        "checked_at": ""
+      },
+      "cleanup": [],
+      "notes": [
+        "No substantive CLI or desktop application exists."
+      ]
+    }
+  ],
+  "follow_up": [
+    {
+      "platform": "pkg_go_dev",
+      "reason": "Recheck documentation page after Go indexing completes.",
+      "owner": "agent"
+    },
+    {
+      "platform": "jsr",
+      "reason": "Complete JSR sign-in and approve @bbwdadfg/digibouquetai-site-kit in the prepared Orca tab, then rerun live publish.",
+      "owner": "user"
+    },
+    {
+      "platform": "crates_io_docs_rs",
+      "reason": "Add the crates.io token to Keychain before preparing and publishing the Rust crate.",
+      "owner": "user"
+    },
+    {
+      "platform": "rubygems",
+      "reason": "Add the RubyGems API key to Keychain before preparing and publishing the gem.",
+      "owner": "user"
+    },
+    {
+      "platform": "hackage",
+      "reason": "Add a Hackage token and confirm uploader approval before preparing an upload.",
+      "owner": "user"
+    }
+  ]
+}
