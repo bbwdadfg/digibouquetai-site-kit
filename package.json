@@ -1,0 +1,42 @@
+{
+  "name": "digibouquetai-site-kit",
+  "version": "0.1.0",
+  "description": "Typed site metadata and canonical URL helpers for DigiBouquet AI.",
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test --experimental-test-coverage"
+  },
+  "keywords": [
+    "digibouquet",
+    "digital-flowers",
+    "gift-card",
+    "url-builder",
+    "site-metadata"
+  ],
+  "homepage": "https://digibouquetai.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbwdadfg/digibouquetai-site-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bbwdadfg/digibouquetai-site-kit/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
