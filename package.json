@@ -18,7 +18,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "test": "node --test --experimental-test-coverage"
+    "test": "node --test --experimental-test-coverage test.js"
   },
   "keywords": [
     "digibouquet",

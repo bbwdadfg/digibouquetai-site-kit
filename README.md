@@ -40,4 +40,8 @@ Useful DigiBouquet AI pages:
 
 Source: [bbwdadfg/digibouquetai-site-kit](https://github.com/bbwdadfg/digibouquetai-site-kit)
 
+The repository also contains the equivalent Go module and JSR TypeScript
+source, so consumers can use the same canonical link vocabulary across those
+ecosystems without adding network calls.
+
 MIT licensed.
