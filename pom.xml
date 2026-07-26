@@ -114,6 +114,7 @@
         <configuration>
           <publishingServerId>central</publishingServerId>
           <autoPublish>${central.autoPublish}</autoPublish>
+          <waitUntil>VALIDATED</waitUntil>
           <skipPublishing>${central.skipPublishing}</skipPublishing>
         </configuration>
       </plugin>

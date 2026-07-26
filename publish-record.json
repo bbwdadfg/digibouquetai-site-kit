@@ -16,7 +16,7 @@
       "https://digibouquetai.com/pricing"
     ],
     "run_started_at": "2026-07-25T17:50:00Z",
-    "run_finished_at": "2026-07-25T18:07:56Z"
+    "run_finished_at": "2026-07-26T03:12:11Z"
   },
   "platforms": [
     {
@@ -40,7 +40,7 @@
       "verification": {
         "method": "github_api_and_public_http",
         "result": "public repository and v0.1.1 release returned HTTP 200; homepage and topics match target",
-        "checked_at": "2026-07-25T18:07:56Z"
+        "checked_at": "2026-07-26T03:12:11Z"
       },
       "cleanup": [],
       "notes": [
@@ -49,7 +49,7 @@
     },
     {
       "platform": "pkg_go_dev",
-      "status": "published",
+      "status": "verified",
       "artifact_type": "go_module",
       "automation_level": "automated_after_git_tag",
       "package": "github.com/bbwdadfg/digibouquetai-site-kit",
@@ -63,80 +63,95 @@
       "credential_status": "not_required",
       "blocked_reason": "",
       "verification": {
-        "method": "go_proxy_http",
-        "result": "Go proxy .info and .mod returned HTTP 200; pkg.go.dev returned 404 during initial indexing check",
-        "checked_at": "2026-07-25T18:07:56Z"
+        "method": "go_proxy_and_pkg_go_dev_http",
+        "result": "Go proxy .info and .mod and the pkg.go.dev v0.1.1 documentation page returned HTTP 200",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
       "cleanup": [],
       "notes": [
-        "Local go test coverage: 91.7%.",
-        "Keep published until pkg.go.dev documentation page returns HTTP 200."
+        "Local go test coverage: 91.7%."
       ]
     },
     {
       "platform": "packagist",
-      "status": "planned",
+      "status": "verified",
       "artifact_type": "composer_package",
       "automation_level": "semi_auto",
       "package": "bbwdadfg/digibouquetai-site-kit",
-      "version": "",
+      "version": "v0.1.2",
       "public_url": "https://packagist.org/packages/bbwdadfg/digibouquetai-site-kit",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_item_present_not_used",
+      "link_surfaces_verified": [
+        "package_homepage",
+        "repository",
+        "README.md"
+      ],
+      "credential_status": "keychain_token_used",
       "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "not verified",
-        "checked_at": ""
+        "method": "packagist_api_and_public_http",
+        "result": "official API returned HTTP 202 and the public package page and metadata API returned HTTP 200 with stable version v0.1.2",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
-      "cleanup": [],
+      "cleanup": [
+        "temporary token variable unset"
+      ],
       "notes": [
-        "Composer artifact not generated in this run."
+        "Composer metadata exposes the DigiBouquet AI homepage and source repository."
       ]
     },
     {
       "platform": "crates_io_docs_rs",
-      "status": "blocked_credentials",
+      "status": "verified",
       "artifact_type": "rust_crate",
       "automation_level": "automated_with_token",
       "package": "digibouquetai-site-kit",
-      "version": "",
+      "version": "0.1.0",
       "public_url": "https://crates.io/crates/digibouquetai-site-kit",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_item_missing",
-      "blocked_reason": "macOS Keychain service publish-package-backlinks/crates-token is missing",
+      "link_surfaces_verified": [
+        "crate_homepage",
+        "repository",
+        "README.md",
+        "docs_rs"
+      ],
+      "credential_status": "trusted_cargo_store_used",
+      "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "not verified",
-        "checked_at": ""
+        "method": "crates_sparse_index_and_docs_rs_http",
+        "result": "crates.io sparse index lists 0.1.0 and the docs.rs latest documentation page returned HTTP 200",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
       "cleanup": [],
       "notes": [
-        "Registry API confirmed the candidate name was available."
+        "cargo test, cargo package, and cargo publish --dry-run passed.",
+        "A minimal 0.1.1 update was rejected with HTTP 403 because the stored token lacks the required permission; 0.1.0 remains verified."
       ]
     },
     {
       "platform": "rubygems",
-      "status": "blocked_credentials",
+      "status": "verified",
       "artifact_type": "ruby_gem",
       "automation_level": "automated_with_token",
       "package": "digibouquetai-site-kit",
-      "version": "",
+      "version": "0.1.0",
       "public_url": "https://rubygems.org/gems/digibouquetai-site-kit",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_item_missing",
-      "blocked_reason": "macOS Keychain service publish-package-backlinks/rubygems-api-key is missing",
+      "link_surfaces_verified": [
+        "gem_homepage",
+        "source_code",
+        "README.md"
+      ],
+      "credential_status": "trusted_rubygems_store_used",
+      "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "not verified",
-        "checked_at": ""
+        "method": "rubygems_api_and_public_http",
+        "result": "RubyGems API and public package page returned HTTP 200 for 0.1.0 with the DigiBouquet AI homepage and source repository",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
       "cleanup": [],
       "notes": [
-        "Registry API confirmed the candidate name was available."
+        "Ruby tests and gem build passed before publication."
       ]
     },
     {
@@ -159,7 +174,7 @@
       "verification": {
         "method": "npm_registry_json",
         "result": "latest is 0.1.0; homepage and repository match; tarball shasum ecb9efdce023cc7be23fb3849dce870e4e52cf7e",
-        "checked_at": "2026-07-25T18:07:56Z"
+        "checked_at": "2026-07-26T03:12:11Z"
       },
       "cleanup": [
         "temporary npmrc deleted",
@@ -173,120 +188,146 @@
     },
     {
       "platform": "pypi",
-      "status": "planned",
+      "status": "verified",
       "artifact_type": "python_package",
       "automation_level": "automated_with_token",
       "package": "digibouquetai-site-kit",
-      "version": "",
+      "version": "0.1.0",
       "public_url": "https://pypi.org/project/digibouquetai-site-kit/",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_item_present_not_used",
+      "link_surfaces_verified": [
+        "project_homepage",
+        "source_repository",
+        "README.md"
+      ],
+      "credential_status": "keychain_token_used",
       "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "not verified",
-        "checked_at": ""
+        "method": "pypi_json_api",
+        "result": "PyPI JSON API returned HTTP 200 for 0.1.0 with homepage and source repository metadata",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
-      "cleanup": [],
+      "cleanup": [
+        "temporary token variable unset"
+      ],
       "notes": [
-        "Registry JSON confirmed the candidate name was available.",
-        "Python artifact not generated in this run."
+        "Python unit tests passed and uv built the wheel and source distribution."
       ]
     },
     {
       "platform": "pub_dev",
-      "status": "planned",
+      "status": "verified",
       "artifact_type": "dart_package",
       "automation_level": "semi_auto_oauth",
       "package": "digibouquetai_site_kit",
-      "version": "",
+      "version": "0.1.0",
       "public_url": "https://pub.dev/packages/digibouquetai_site_kit",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "oauth_not_checked",
+      "link_surfaces_verified": [
+        "package_homepage",
+        "repository",
+        "README.md"
+      ],
+      "credential_status": "existing_dart_oauth_session_used",
       "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "not verified",
-        "checked_at": ""
+        "method": "pub_dev_api_and_public_http",
+        "result": "pub.dev API and public package page returned HTTP 200 with latest version 0.1.0",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
       "cleanup": [],
       "notes": [
-        "Registry API confirmed the candidate name was available.",
-        "Dart artifact not generated in this run."
+        "Dart tests passed and strict publish dry-run completed with zero warnings."
       ]
     },
     {
       "platform": "hex_hexdocs",
-      "status": "planned",
+      "status": "verified",
       "artifact_type": "elixir_package",
       "automation_level": "automated_with_token",
       "package": "digibouquetai_site_kit",
-      "version": "",
+      "version": "0.1.0",
       "public_url": "https://hex.pm/packages/digibouquetai_site_kit",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_item_present_not_used",
+      "link_surfaces_verified": [
+        "package_homepage",
+        "repository",
+        "README.md",
+        "hexdocs"
+      ],
+      "credential_status": "keychain_token_used",
       "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "not verified",
-        "checked_at": ""
+        "method": "hex_api_and_hexdocs_http",
+        "result": "Hex API returned HTTP 200 with latest version 0.1.0 and HexDocs returned HTTP 200",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
-      "cleanup": [],
+      "cleanup": [
+        "temporary token variable unset"
+      ],
       "notes": [
-        "Registry API confirmed the candidate name was available.",
-        "Elixir artifact not generated in this run."
+        "Mix tests and mix hex.build passed before publication."
       ]
     },
     {
       "platform": "clojars",
-      "status": "planned",
+      "status": "verified",
       "artifact_type": "maven_artifact",
       "automation_level": "automated_with_token",
       "package": "net.clojars.tianwei/digibouquetai-site-kit",
-      "version": "",
+      "version": "0.1.0",
       "public_url": "https://clojars.org/net.clojars.tianwei/digibouquetai-site-kit",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_items_present_not_used",
+      "link_surfaces_verified": [
+        "package_page",
+        "pom_homepage",
+        "scm_repository"
+      ],
+      "credential_status": "keychain_credentials_used",
       "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "not verified",
-        "checked_at": ""
+        "method": "clojars_public_http_and_pom",
+        "result": "Clojars package page and published POM returned HTTP 200; POM contains the DigiBouquet AI homepage and source repository",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
-      "cleanup": [],
+      "cleanup": [
+        "temporary Maven settings deleted"
+      ],
       "notes": [
-        "Java/Clojars artifact not generated in this run."
+        "Java tests passed and jar, sources, javadocs, and POM were deployed."
       ]
     },
     {
       "platform": "docker_hub",
-      "status": "planned",
+      "status": "verified",
       "artifact_type": "oci_image",
       "automation_level": "automated_with_token_or_api",
       "package": "baiwei111/digibouquetai-site-kit",
-      "version": "",
+      "version": "0.1.0, latest",
       "public_url": "https://hub.docker.com/r/baiwei111/digibouquetai-site-kit",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_items_present_not_used",
+      "link_surfaces_verified": [
+        "repository_overview",
+        "image_labels",
+        "source_repository"
+      ],
+      "credential_status": "keychain_credentials_used",
       "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "not verified",
-        "checked_at": ""
+        "method": "anonymous_registry_v2_manifest",
+        "result": "anonymous registry pulls for 0.1.0 and latest returned HTTP 200; manifest digest sha256:375cd877517a457bf614a5b47d163d8c1e51f5e671a07e5e121786bf201ac8dc",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
-      "cleanup": [],
+      "cleanup": [
+        "temporary token variables unset"
+      ],
       "notes": [
-        "OCI image was not generated in this run."
+        "Docker Hub registry API was reached through the documented DNS-over-HTTPS fallback after local TLS/DNS failure."
       ]
     },
     {
       "platform": "jsr",
-      "status": "blocked_oauth",
+      "status": "verified",
       "artifact_type": "typescript_package",
       "automation_level": "semi_auto",
       "package": "@bbwdadfg/digibouquetai-site-kit",
@@ -295,114 +336,140 @@
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
       "link_surfaces_verified": [
         "README.md",
+        "package_page",
+        "version_page",
         "repository"
       ],
-      "credential_status": "keychain_item_present_not_used",
-      "blocked_reason": "JSR requires sign-in and first-time scoped package approval before live publish",
+      "credential_status": "interactive_browser_auth_used",
+      "blocked_reason": "",
       "verification": {
-        "method": "jsr_cli_dry_run_and_orca_snapshot",
-        "result": "JSR dry-run passed; Orca tab e074945e-eb9c-4e01-bc5e-8465dfdf14be is stopped at Sign in to JSR",
-        "checked_at": "2026-07-25T18:07:56Z"
+        "method": "public_page_registry_metadata_and_readme",
+        "result": "package and version pages returned HTTP 200; registry latest is 0.1.0; published README contains the DigiBouquet AI homepage and product links",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
       "cleanup": [],
       "notes": [
-        "Live publish was not attempted because the new package API returned 404 and approval is user-controlled.",
-        "The jsr CLI wrapper can expose token arguments on failure, so no token was passed before namespace approval."
+        "Deno check passed and mod_test.ts passed 1/1.",
+        "JSR dry-run passed with only LICENSE, README.md, jsr.json, and mod.ts.",
+        "First-time authorization used only the Orca embedded browser; no external browser was used."
       ]
     },
     {
       "platform": "maven_central_javadoc",
-      "status": "planned",
+      "status": "published",
       "artifact_type": "java_library",
       "automation_level": "semi_auto_signed",
       "package": "io.github.bbwdadfg:digibouquetai-site-kit",
-      "version": "",
+      "version": "0.1.0",
       "public_url": "https://central.sonatype.com/artifact/io.github.bbwdadfg/digibouquetai-site-kit",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_items_present_not_used",
+      "link_surfaces_verified": [
+        "central_portal_page",
+        "pom_metadata",
+        "javadoc_io"
+      ],
+      "credential_status": "keychain_credentials_and_gpg_key_used",
       "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "not verified",
-        "checked_at": ""
+        "method": "central_publisher_api_and_public_indexing_check",
+        "result": "deployment fb2ffde1-a765-4b8e-b0b9-c1515aafb5dc was validated and publish API returned HTTP 204; repo1.maven.org files still returned HTTP 404 during final indexing check",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
-      "cleanup": [],
+      "cleanup": [
+        "temporary Maven settings deleted",
+        "temporary credential variables unset"
+      ],
       "notes": [
-        "Central-ready Java artifact and signatures were not generated in this run."
+        "Signed jar, sources, javadocs, POM, checksums, and signatures were uploaded; public repository indexing is pending."
       ]
     },
     {
       "platform": "nuget",
-      "status": "planned",
+      "status": "verified",
       "artifact_type": "dotnet_package",
       "automation_level": "automated_with_token",
-      "package": "DigibouquetaiSiteKit",
-      "version": "",
-      "public_url": "https://www.nuget.org/packages/DigibouquetaiSiteKit",
+      "package": "DigiBouquetAISiteKit",
+      "version": "0.1.0",
+      "public_url": "https://www.nuget.org/packages/DigiBouquetAISiteKit",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_item_present_not_used",
+      "link_surfaces_verified": [
+        "package_homepage",
+        "repository",
+        "README.md",
+        "registry_metadata"
+      ],
+      "credential_status": "keychain_token_used",
       "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "not verified",
-        "checked_at": ""
+        "method": "nuget_flat_container_api_and_public_http",
+        "result": "NuGet flat-container API returned HTTP 200 and lists version 0.1.0; public package page returned HTTP 200",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
-      "cleanup": [],
+      "cleanup": [
+        "temporary API key variable unset"
+      ],
       "notes": [
-        "Registry API confirmed the candidate ID was available.",
-        ".NET artifact not generated in this run."
+        "dotnet tests passed 2/2 and dotnet pack completed before publication."
       ]
     },
     {
       "platform": "cocoapods",
-      "status": "planned",
+      "status": "verified",
       "artifact_type": "ios_macos_pod",
       "automation_level": "semi_auto_with_trunk_auth",
       "package": "DigibouquetaiSiteKit",
-      "version": "",
+      "version": "0.1.0",
       "public_url": "https://cocoapods.org/pods/DigibouquetaiSiteKit",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_item_present_not_used",
+      "link_surfaces_verified": [
+        "pod_homepage",
+        "source_repository",
+        "podspec"
+      ],
+      "credential_status": "keychain_trunk_session_used_by_github_actions",
       "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "not verified",
-        "checked_at": ""
+        "method": "pod_trunk_info_public_http_and_ci",
+        "result": "pod trunk info lists 0.1.0, public pod page returned HTTP 200, and GitHub Actions lint/publish run 30185249269 succeeded",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
       "cleanup": [],
       "notes": [
-        "Trunk API confirmed the candidate pod name was available.",
-        "Swift pod was not generated in this run."
+        "Swift source compiled locally; local XCTest was unavailable in the installed command-line toolchain.",
+        "Full CocoaPods lint and trunk publication succeeded on GitHub Actions macOS."
       ]
     },
     {
       "platform": "luarocks",
-      "status": "planned",
+      "status": "verified",
       "artifact_type": "lua_module",
       "automation_level": "automated_with_token",
       "package": "bbwdadfg/digibouquetai-site-kit",
-      "version": "",
+      "version": "0.1.0-1",
       "public_url": "https://luarocks.org/modules/bbwdadfg/digibouquetai-site-kit",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_item_present_not_used",
+      "link_surfaces_verified": [
+        "module_homepage",
+        "source_repository",
+        "rockspec"
+      ],
+      "credential_status": "keychain_token_used",
       "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "not verified",
-        "checked_at": ""
+        "method": "luarocks_public_http",
+        "result": "LuaRocks module page returned HTTP 200 and lists version 0.1.0-1 with the DigiBouquet AI homepage",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
-      "cleanup": [],
+      "cleanup": [
+        "temporary API key variable unset"
+      ],
       "notes": [
-        "Lua rock was not generated in this run."
+        "Lua tests, luarocks lint, and luarocks pack passed before publication."
       ]
     },
     {
       "platform": "cpan_metacpan",
-      "status": "planned",
+      "status": "blocked_credentials",
       "artifact_type": "perl_distribution",
       "automation_level": "automated_with_pause_account",
       "package": "DigiBouquetAI-SiteKit",
@@ -410,8 +477,8 @@
       "public_url": "https://metacpan.org/dist/DigiBouquetAI-SiteKit",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
       "link_surfaces_verified": [],
-      "credential_status": "keychain_items_present_not_used",
-      "blocked_reason": "",
+      "credential_status": "keychain_credentials_rejected",
+      "blocked_reason": "Stored PAUSE credentials returned HTTP 401 Unauthorized",
       "verification": {
         "method": "not_run",
         "result": "not verified",
@@ -419,8 +486,8 @@
       },
       "cleanup": [],
       "notes": [
-        "Perl distribution was not generated in this run.",
-        "Prior run memory reports stored PAUSE credentials returned 401; revalidate before publish."
+        "Perl distribution built successfully and all 7 tests passed.",
+        "Refresh the PAUSE credentials in Keychain before retrying the upload."
       ]
     },
     {
@@ -447,68 +514,87 @@
     },
     {
       "platform": "chocolatey",
-      "status": "planned",
+      "status": "submitted",
       "artifact_type": "windows_package",
       "automation_level": "semi_auto_review",
       "package": "digibouquetai-site-kit",
-      "version": "",
+      "version": "0.1.0",
       "public_url": "https://community.chocolatey.org/packages/digibouquetai-site-kit",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_item_present_not_used",
+      "link_surfaces_verified": [
+        "package_homepage",
+        "repository",
+        "package_page"
+      ],
+      "credential_status": "keychain_token_used",
       "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "not verified",
-        "checked_at": ""
+        "method": "chocolatey_public_package_page",
+        "result": "public package page returned HTTP 200 and reports version 0.1.0 pending automated review",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
-      "cleanup": [],
+      "cleanup": [
+        "temporary API key variable unset"
+      ],
       "notes": [
-        "Windows package was not generated in this run."
+        "The nupkg was built and submitted; validation, verification, and scan review remain pending."
       ]
     },
     {
       "platform": "github_packages",
-      "status": "planned",
+      "status": "published",
       "artifact_type": "github_package",
       "automation_level": "automated_with_token",
       "package": "@bbwdadfg/digibouquetai-site-kit",
-      "version": "",
-      "public_url": "https://github.com/bbwdadfg/digibouquetai-site-kit/pkgs/npm/digibouquetai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://github.com/users/bbwdadfg/packages/npm/package/digibouquetai-site-kit",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_item_present_not_used",
-      "blocked_reason": "",
+      "link_surfaces_verified": [
+        "authenticated_package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "Package visibility remains private; public package URL returns HTTP 404",
       "verification": {
-        "method": "not_run",
-        "result": "not verified",
-        "checked_at": ""
+        "method": "github_packages_api_and_public_http",
+        "result": "authenticated API lists @bbwdadfg/digibouquetai-site-kit 0.1.0 linked to the repository; public URL returned HTTP 404 because visibility is private",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
-      "cleanup": [],
+      "cleanup": [
+        "temporary npmrc deleted",
+        "temporary token variable unset"
+      ],
       "notes": [
-        "GitHub Packages copy was not published in this run."
+        "Publication succeeded; owner must change package visibility to public in GitHub package settings."
       ]
     },
     {
       "platform": "gitlab_packages",
-      "status": "planned",
+      "status": "verified",
       "artifact_type": "gitlab_package",
       "automation_level": "automated_with_token_or_ci",
       "package": "digibouquetai-site-kit",
-      "version": "",
-      "public_url": "",
+      "version": "0.1.0",
+      "public_url": "https://gitlab.com/baiwei.chu/digibouquetai-site-kit/-/packages",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_item_present_not_used",
+      "link_surfaces_verified": [
+        "public_project",
+        "package_registry",
+        "README.md",
+        "artifact"
+      ],
+      "credential_status": "keychain_token_used",
       "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "not verified",
-        "checked_at": ""
+        "method": "gitlab_public_api_and_artifact_checksum",
+        "result": "public project and packages API returned HTTP 200; unauthenticated artifact download SHA-256 matched 7b3f3facd40b3b14df70c4448b862c10bc916054c64a4fb56c85c85d61248e92",
+        "checked_at": "2026-07-26T03:12:11Z"
       },
-      "cleanup": [],
+      "cleanup": [
+        "temporary token variable unset"
+      ],
       "notes": [
-        "GitLab project/package was not created in this run."
+        "Public GitLab project 84814708 includes a backlink-bearing README and the Generic Package Registry artifact."
       ]
     },
     {
@@ -734,23 +820,23 @@
   ],
   "follow_up": [
     {
-      "platform": "pkg_go_dev",
-      "reason": "Recheck documentation page after Go indexing completes.",
+      "platform": "maven_central_javadoc",
+      "reason": "Recheck repo1.maven.org after Central repository indexing completes.",
       "owner": "agent"
     },
     {
-      "platform": "jsr",
-      "reason": "Complete JSR sign-in and approve @bbwdadfg/digibouquetai-site-kit in the prepared Orca tab, then rerun live publish.",
+      "platform": "cpan_metacpan",
+      "reason": "Replace the rejected PAUSE credentials in Keychain, then rerun the CPAN upload.",
       "owner": "user"
     },
     {
-      "platform": "crates_io_docs_rs",
-      "reason": "Add the crates.io token to Keychain before preparing and publishing the Rust crate.",
-      "owner": "user"
+      "platform": "chocolatey",
+      "reason": "Wait for Chocolatey automated validation, verification, and scan review.",
+      "owner": "platform"
     },
     {
-      "platform": "rubygems",
-      "reason": "Add the RubyGems API key to Keychain before preparing and publishing the gem.",
+      "platform": "github_packages",
+      "reason": "Change the published package visibility from private to public in GitHub package settings.",
       "owner": "user"
     },
     {
