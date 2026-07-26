@@ -1,0 +1,7 @@
+.git
+target
+dist
+__pycache__
+*.gem
+*.tgz
+*.tar

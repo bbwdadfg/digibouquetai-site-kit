@@ -1,0 +1,42 @@
+#!/bin/sh
+set -eu
+
+base_url="https://digibouquetai.com"
+command="${1:-home}"
+value="${2:-}"
+
+case "$command" in
+  home)
+    printf '%s\n' "$base_url"
+    ;;
+  page)
+    clean=$(printf '%s' "$value" | sed 's#^/*##; s#/*$##')
+    if [ -z "$clean" ]; then
+      printf '%s\n' "$base_url"
+    else
+      printf '%s/%s\n' "$base_url" "$clean"
+    fi
+    ;;
+  create-bouquet)
+    printf '%s/create-bouquet\n' "$base_url"
+    ;;
+  ai-card)
+    printf '%s/ai-card\n' "$base_url"
+    ;;
+  examples)
+    printf '%s/bouquet-examples\n' "$base_url"
+    ;;
+  guides)
+    printf '%s/guides\n' "$base_url"
+    ;;
+  pricing)
+    printf '%s/pricing\n' "$base_url"
+    ;;
+  about)
+    printf '%s/about\n' "$base_url"
+    ;;
+  *)
+    printf 'usage: digibouquetai-site-kit [home|create-bouquet|ai-card|examples|guides|pricing|about|page <slug>]\n' >&2
+    exit 64
+    ;;
+esac

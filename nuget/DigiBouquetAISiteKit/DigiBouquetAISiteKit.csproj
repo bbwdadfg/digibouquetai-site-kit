@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>DigiBouquetAISiteKit</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>DigiBouquet AI</Authors>
+    <Company>DigiBouquet AI</Company>
+    <Description>Canonical URL helpers for DigiBouquet AI digital bouquets and AI gift cards.</Description>
+    <PackageTags>digibouquetai;digital-bouquet;gift-card;flowers</PackageTags>
+    <PackageProjectUrl>https://digibouquetai.com</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/bbwdadfg/digibouquetai-site-kit</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "digibouquetai-site-kit"
+version = "0.1.0"
+description = "Canonical URL helpers for DigiBouquet AI digital bouquets and AI gift cards."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [{ name = "DigiBouquet AI", email = "support@digibouquetai.com" }]
+keywords = ["digibouquetai", "digital-bouquet", "gift-card", "flowers"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.urls]
+Homepage = "https://digibouquetai.com"
+Source = "https://github.com/bbwdadfg/digibouquetai-site-kit"
+"Bouquet builder" = "https://digibouquetai.com/create-bouquet"
+"AI gift card" = "https://digibouquetai.com/ai-card"
+Examples = "https://digibouquetai.com/bouquet-examples"
+Guides = "https://digibouquetai.com/guides"
+
+[tool.hatch.build.targets.wheel]
+packages = ["digibouquetai_site_kit"]

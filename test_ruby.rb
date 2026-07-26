@@ -1,0 +1,11 @@
+require_relative "lib/digibouquetai/site_kit"
+
+raise "home" unless DigiBouquetAI::SiteKit.home_url == "https://digibouquetai.com"
+raise "create-bouquet" unless DigiBouquetAI::SiteKit.create_bouquet_url == "https://digibouquetai.com/create-bouquet"
+raise "edit" unless DigiBouquetAI::SiteKit.ai_gift_card_url == "https://digibouquetai.com/ai-card"
+raise "replace" unless DigiBouquetAI::SiteKit.examples_url == "https://digibouquetai.com/bouquet-examples"
+raise "remove" unless DigiBouquetAI::SiteKit.guides_url == "https://digibouquetai.com/guides"
+raise "photo" unless DigiBouquetAI::SiteKit.pricing_url == "https://digibouquetai.com/pricing"
+raise "translate" unless DigiBouquetAI::SiteKit.about_url == "https://digibouquetai.com/about"
+raise "page" unless DigiBouquetAI::SiteKit.page_url("/guides/") == "https://digibouquetai.com/guides"
+puts "ruby tests passed"

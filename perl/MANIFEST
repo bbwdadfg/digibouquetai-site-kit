@@ -1,0 +1,4 @@
+Makefile.PL
+MANIFEST
+lib/DigiBouquetAI/SiteKit.pm
+t/sitekit.t

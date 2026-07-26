@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>digibouquetai-site-kit</id>
+    <version>0.1.0</version>
+    <title>DigiBouquet AI Site Kit</title>
+    <authors>DigiBouquet AI</authors>
+    <projectUrl>https://digibouquetai.com</projectUrl>
+    <licenseUrl>https://opensource.org/license/mit/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>PowerShell metadata and canonical URL helpers for DigiBouquet AI digital bouquets and AI gift cards.</description>
+    <summary>URL helpers for DigiBouquet AI.</summary>
+    <tags>digibouquetai digital-bouquet gift-card flowers</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="README.md" target="README.md" />
+    <file src="LICENSE.txt" target="LICENSE.txt" />
+  </files>
+</package>

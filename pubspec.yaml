@@ -1,0 +1,18 @@
+name: digibouquetai_site_kit
+description: Canonical URL helpers for DigiBouquet AI digital bouquets and AI gift cards.
+version: 0.1.0
+homepage: https://digibouquetai.com
+repository: https://github.com/bbwdadfg/digibouquetai-site-kit
+issue_tracker: https://github.com/bbwdadfg/digibouquetai-site-kit/issues
+
+environment:
+  sdk: ^3.8.0
+
+topics:
+  - digital-gifts
+  - gift-cards
+  - flowers
+  - ai
+
+dev_dependencies:
+  test: ^1.25.0

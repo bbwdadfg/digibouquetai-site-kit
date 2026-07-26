@@ -1,0 +1,11 @@
+package.path = "./lua/?.lua;" .. package.path
+local site = require("digibouquetai_site_kit")
+assert(site.home_url() == "https://digibouquetai.com")
+assert(site.create_bouquet_url() == "https://digibouquetai.com/create-bouquet")
+assert(site.ai_gift_card_url() == "https://digibouquetai.com/ai-card")
+assert(site.examples_url() == "https://digibouquetai.com/bouquet-examples")
+assert(site.guides_url() == "https://digibouquetai.com/guides")
+assert(site.pricing_url() == "https://digibouquetai.com/pricing")
+assert(site.about_url() == "https://digibouquetai.com/about")
+assert(site.page_url("/guides/") == "https://digibouquetai.com/guides")
+print("lua tests passed")
