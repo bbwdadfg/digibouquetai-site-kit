@@ -1,6 +1,6 @@
 [package]
 name = "digibouquetai-site-kit"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Canonical URL helpers for DigiBouquet AI digital bouquets and AI gift cards."
 license = "MIT"
@@ -10,7 +10,7 @@ documentation = "https://docs.rs/digibouquetai-site-kit"
 readme = "README.md"
 keywords = ["digibouquetai", "bouquet", "gift-card", "flowers", "ai"]
 categories = ["web-programming"]
-include = ["Cargo.toml", "README.md", "LICENSE", "rust/src/lib.rs"]
+include = ["/Cargo.toml", "/README.md", "/LICENSE", "/rust/src/lib.rs"]
 
 [lib]
 name = "digibouquetai_site_kit"
