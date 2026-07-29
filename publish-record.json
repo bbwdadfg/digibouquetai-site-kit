@@ -356,7 +356,7 @@
     },
     {
       "platform": "maven_central_javadoc",
-      "status": "published",
+      "status": "verified",
       "artifact_type": "java_library",
       "automation_level": "semi_auto_signed",
       "package": "io.github.bbwdadfg:digibouquetai-site-kit",
@@ -371,16 +371,16 @@
       "credential_status": "keychain_credentials_and_gpg_key_used",
       "blocked_reason": "",
       "verification": {
-        "method": "central_publisher_api_and_public_indexing_check",
-        "result": "deployment fb2ffde1-a765-4b8e-b0b9-c1515aafb5dc was validated and publish API returned HTTP 204; repo1.maven.org files still returned HTTP 404 during final indexing check",
-        "checked_at": "2026-07-26T03:12:11Z"
+        "method": "central_public_page_and_repo1_http",
+        "result": "Central artifact page and repo1.maven.org POM and JAR returned HTTP 200 for version 0.1.0",
+        "checked_at": "2026-07-29T12:36:31Z"
       },
       "cleanup": [
         "temporary Maven settings deleted",
         "temporary credential variables unset"
       ],
       "notes": [
-        "Signed jar, sources, javadocs, POM, checksums, and signatures were uploaded; public repository indexing is pending."
+        "Deployment fb2ffde1-a765-4b8e-b0b9-c1515aafb5dc was validated and published."
       ]
     },
     {
@@ -530,42 +530,42 @@
       "blocked_reason": "",
       "verification": {
         "method": "chocolatey_public_package_page",
-        "result": "public package page returned HTTP 200 and reports version 0.1.0 pending automated review",
-        "checked_at": "2026-07-26T03:12:11Z"
+        "result": "public package page returned HTTP 200; validator, package testing, and virus scanning checks passed; human moderation remains pending",
+        "checked_at": "2026-07-29T12:36:31Z"
       },
       "cleanup": [
         "temporary API key variable unset"
       ],
       "notes": [
-        "The nupkg was built and submitted; validation, verification, and scan review remain pending."
+        "The nupkg was built and submitted; no package changes are currently requested."
       ]
     },
     {
       "platform": "github_packages",
-      "status": "published",
+      "status": "verified",
       "artifact_type": "github_package",
       "automation_level": "automated_with_token",
       "package": "@bbwdadfg/digibouquetai-site-kit",
       "version": "0.1.0",
-      "public_url": "https://github.com/users/bbwdadfg/packages/npm/package/digibouquetai-site-kit",
+      "public_url": "https://github.com/bbwdadfg/digibouquetai-site-kit/pkgs/npm/digibouquetai-site-kit",
       "repository_url": "https://github.com/bbwdadfg/digibouquetai-site-kit",
       "link_surfaces_verified": [
-        "authenticated_package_metadata",
+        "public_package_page",
         "repository"
       ],
       "credential_status": "keychain_token_used",
-      "blocked_reason": "Package visibility remains private; public package URL returns HTTP 404",
+      "blocked_reason": "",
       "verification": {
         "method": "github_packages_api_and_public_http",
-        "result": "authenticated API lists @bbwdadfg/digibouquetai-site-kit 0.1.0 linked to the repository; public URL returned HTTP 404 because visibility is private",
-        "checked_at": "2026-07-26T03:12:11Z"
+        "result": "package visibility was changed to public in Orca and the unauthenticated package URL returned HTTP 200",
+        "checked_at": "2026-07-29T12:36:31Z"
       },
       "cleanup": [
         "temporary npmrc deleted",
         "temporary token variable unset"
       ],
       "notes": [
-        "Publication succeeded; owner must change package visibility to public in GitHub package settings."
+        "Version 0.1.0 remains linked to the public source repository."
       ]
     },
     {
@@ -820,11 +820,6 @@
   ],
   "follow_up": [
     {
-      "platform": "maven_central_javadoc",
-      "reason": "Recheck repo1.maven.org after Central repository indexing completes.",
-      "owner": "agent"
-    },
-    {
       "platform": "cpan_metacpan",
       "reason": "Replace the rejected PAUSE credentials in Keychain, then rerun the CPAN upload.",
       "owner": "user"
@@ -833,11 +828,6 @@
       "platform": "chocolatey",
       "reason": "Wait for Chocolatey automated validation, verification, and scan review.",
       "owner": "platform"
-    },
-    {
-      "platform": "github_packages",
-      "reason": "Change the published package visibility from private to public in GitHub package settings.",
-      "owner": "user"
     },
     {
       "platform": "hackage",

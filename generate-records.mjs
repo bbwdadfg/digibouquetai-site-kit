@@ -1,6 +1,7 @@
 import { writeFileSync } from 'node:fs';
 
 const checkedAt = '2026-07-26T03:12:11Z';
+const refreshedAt = '2026-07-29T12:36:31Z';
 const repositoryUrl =
   'https://github.com/bbwdadfg/digibouquetai-site-kit';
 
@@ -17,6 +18,7 @@ function platform({
   blockedReason = '',
   verificationMethod = 'not_run',
   verificationResult = 'not verified',
+  verificationCheckedAt = checkedAt,
   cleanup = [],
   notes = [],
 }) {
@@ -35,7 +37,7 @@ function platform({
     verification: {
       method: verificationMethod,
       result: verificationResult,
-      checked_at: verificationMethod === 'not_run' ? '' : checkedAt,
+      checked_at: verificationMethod === 'not_run' ? '' : verificationCheckedAt,
     },
     cleanup,
     notes,
@@ -272,7 +274,7 @@ const record = {
     }),
     platform({
       platform: 'maven_central_javadoc',
-      status: 'published',
+      status: 'verified',
       artifactType: 'java_library',
       automationLevel: 'semi_auto_signed',
       packageName: 'io.github.bbwdadfg:digibouquetai-site-kit',
@@ -281,11 +283,12 @@ const record = {
         'https://central.sonatype.com/artifact/io.github.bbwdadfg/digibouquetai-site-kit',
       links: ['central_portal_page', 'pom_metadata', 'javadoc_io'],
       credentialStatus: 'keychain_credentials_and_gpg_key_used',
-      verificationMethod: 'central_publisher_api_and_public_indexing_check',
+      verificationMethod: 'central_public_page_and_repo1_http',
       verificationResult:
-        'deployment fb2ffde1-a765-4b8e-b0b9-c1515aafb5dc was validated and publish API returned HTTP 204; repo1.maven.org files still returned HTTP 404 during final indexing check',
+        'Central artifact page and repo1.maven.org POM and JAR returned HTTP 200 for version 0.1.0',
+      verificationCheckedAt: refreshedAt,
       cleanup: ['temporary Maven settings deleted', 'temporary credential variables unset'],
-      notes: ['Signed jar, sources, javadocs, POM, checksums, and signatures were uploaded; public repository indexing is pending.'],
+      notes: ['Deployment fb2ffde1-a765-4b8e-b0b9-c1515aafb5dc was validated and published.'],
     }),
     platform({
       platform: 'nuget',
@@ -377,27 +380,28 @@ const record = {
       credentialStatus: 'keychain_token_used',
       verificationMethod: 'chocolatey_public_package_page',
       verificationResult:
-        'public package page returned HTTP 200 and reports version 0.1.0 pending automated review',
+        'public package page returned HTTP 200; validator, package testing, and virus scanning checks passed; human moderation remains pending',
+      verificationCheckedAt: refreshedAt,
       cleanup: ['temporary API key variable unset'],
-      notes: ['The nupkg was built and submitted; validation, verification, and scan review remain pending.'],
+      notes: ['The nupkg was built and submitted; no package changes are currently requested.'],
     }),
     platform({
       platform: 'github_packages',
-      status: 'published',
+      status: 'verified',
       artifactType: 'github_package',
       automationLevel: 'automated_with_token',
       packageName: '@bbwdadfg/digibouquetai-site-kit',
       version: '0.1.0',
       publicUrl:
-        'https://github.com/users/bbwdadfg/packages/npm/package/digibouquetai-site-kit',
-      links: ['authenticated_package_metadata', 'repository'],
+        'https://github.com/bbwdadfg/digibouquetai-site-kit/pkgs/npm/digibouquetai-site-kit',
+      links: ['public_package_page', 'repository'],
       credentialStatus: 'keychain_token_used',
-      blockedReason: 'Package visibility remains private; public package URL returns HTTP 404',
       verificationMethod: 'github_packages_api_and_public_http',
       verificationResult:
-        'authenticated API lists @bbwdadfg/digibouquetai-site-kit 0.1.0 linked to the repository; public URL returned HTTP 404 because visibility is private',
+        'package visibility was changed to public in Orca and the unauthenticated package URL returned HTTP 200',
+      verificationCheckedAt: refreshedAt,
       cleanup: ['temporary npmrc deleted', 'temporary token variable unset'],
-      notes: ['Publication succeeded; owner must change package visibility to public in GitHub package settings.'],
+      notes: ['Version 0.1.0 remains linked to the public source repository.'],
     }),
     platform({
       platform: 'gitlab_packages',
@@ -441,11 +445,6 @@ const record = {
   ],
   follow_up: [
     {
-      platform: 'maven_central_javadoc',
-      reason: 'Recheck repo1.maven.org after Central repository indexing completes.',
-      owner: 'agent',
-    },
-    {
       platform: 'cpan_metacpan',
       reason:
         'Replace the rejected PAUSE credentials in Keychain, then rerun the CPAN upload.',
@@ -456,12 +455,6 @@ const record = {
       reason:
         'Wait for Chocolatey automated validation, verification, and scan review.',
       owner: 'platform',
-    },
-    {
-      platform: 'github_packages',
-      reason:
-        'Change the published package visibility from private to public in GitHub package settings.',
-      owner: 'user',
     },
     {
       platform: 'hackage',

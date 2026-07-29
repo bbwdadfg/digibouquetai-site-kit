@@ -10,10 +10,9 @@
 | Status | Count |
 | --- | ---: |
 | blocked_credentials | 2 |
-| published | 2 |
 | skipped_not_applicable | 10 |
 | submitted | 1 |
-| verified | 16 |
+| verified | 18 |
 
 ## Published Links
 
@@ -31,12 +30,12 @@
 | clojars | `net.clojars.tianwei/digibouquetai-site-kit` | `0.1.0` | <https://clojars.org/net.clojars.tianwei/digibouquetai-site-kit> | Clojars package page and published POM returned HTTP 200; POM contains the DigiBouquet AI homepage and source repository |
 | docker_hub | `baiwei111/digibouquetai-site-kit` | `0.1.0, latest` | <https://hub.docker.com/r/baiwei111/digibouquetai-site-kit> | anonymous registry pulls for 0.1.0 and latest returned HTTP 200; manifest digest sha256:375cd877517a457bf614a5b47d163d8c1e51f5e671a07e5e121786bf201ac8dc |
 | jsr | `@bbwdadfg/digibouquetai-site-kit` | `0.1.0` | <https://jsr.io/@bbwdadfg/digibouquetai-site-kit> | package and version pages returned HTTP 200; registry latest is 0.1.0; published README contains the DigiBouquet AI homepage and product links |
-| maven_central_javadoc | `io.github.bbwdadfg:digibouquetai-site-kit` | `0.1.0` | <https://central.sonatype.com/artifact/io.github.bbwdadfg/digibouquetai-site-kit> | deployment fb2ffde1-a765-4b8e-b0b9-c1515aafb5dc was validated and publish API returned HTTP 204; repo1.maven.org files still returned HTTP 404 during final indexing check |
+| maven_central_javadoc | `io.github.bbwdadfg:digibouquetai-site-kit` | `0.1.0` | <https://central.sonatype.com/artifact/io.github.bbwdadfg/digibouquetai-site-kit> | Central artifact page and repo1.maven.org POM and JAR returned HTTP 200 for version 0.1.0 |
 | nuget | `DigiBouquetAISiteKit` | `0.1.0` | <https://www.nuget.org/packages/DigiBouquetAISiteKit> | NuGet flat-container API returned HTTP 200 and lists version 0.1.0; public package page returned HTTP 200 |
 | cocoapods | `DigibouquetaiSiteKit` | `0.1.0` | <https://cocoapods.org/pods/DigibouquetaiSiteKit> | pod trunk info lists 0.1.0, public pod page returned HTTP 200, and GitHub Actions lint/publish run 30185249269 succeeded |
 | luarocks | `bbwdadfg/digibouquetai-site-kit` | `0.1.0-1` | <https://luarocks.org/modules/bbwdadfg/digibouquetai-site-kit> | LuaRocks module page returned HTTP 200 and lists version 0.1.0-1 with the DigiBouquet AI homepage |
-| chocolatey | `digibouquetai-site-kit` | `0.1.0` | <https://community.chocolatey.org/packages/digibouquetai-site-kit> | public package page returned HTTP 200 and reports version 0.1.0 pending automated review |
-| github_packages | `@bbwdadfg/digibouquetai-site-kit` | `0.1.0` | <https://github.com/users/bbwdadfg/packages/npm/package/digibouquetai-site-kit> | authenticated API lists @bbwdadfg/digibouquetai-site-kit 0.1.0 linked to the repository; public URL returned HTTP 404 because visibility is private |
+| chocolatey | `digibouquetai-site-kit` | `0.1.0` | <https://community.chocolatey.org/packages/digibouquetai-site-kit> | public package page returned HTTP 200; validator, package testing, and virus scanning checks passed; human moderation remains pending |
+| github_packages | `@bbwdadfg/digibouquetai-site-kit` | `0.1.0` | <https://github.com/bbwdadfg/digibouquetai-site-kit/pkgs/npm/digibouquetai-site-kit> | package visibility was changed to public in Orca and the unauthenticated package URL returned HTTP 200 |
 | gitlab_packages | `digibouquetai-site-kit` | `0.1.0` | <https://gitlab.com/baiwei.chu/digibouquetai-site-kit/-/packages> | public project and packages API returned HTTP 200; unauthenticated artifact download SHA-256 matched 7b3f3facd40b3b14df70c4448b862c10bc916054c64a4fb56c85c85d61248e92 |
 
 ## Blocked Or Manual Steps
@@ -71,8 +70,6 @@
 
 ## Follow-Up Queue
 
-- maven_central_javadoc: Recheck repo1.maven.org after Central repository indexing completes. Owner: agent.
 - cpan_metacpan: Replace the rejected PAUSE credentials in Keychain, then rerun the CPAN upload. Owner: user.
 - chocolatey: Wait for Chocolatey automated validation, verification, and scan review. Owner: platform.
-- github_packages: Change the published package visibility from private to public in GitHub package settings. Owner: user.
 - hackage: Add a Hackage token and confirm uploader approval before preparing an upload. Owner: user.
